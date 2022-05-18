@@ -5,17 +5,13 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-
 import Container from '@mui/material/Container';
-
 import Button from '@mui/material/Button';
-
 import MenuItem from '@mui/material/MenuItem';
 
+import CartWidgetNav from './CartWidget/CartWidget';
 
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-import './NavBar.css';
 
 const pages = ['Productos', 'Nosotros', 'Contacto'];
 
@@ -31,13 +27,14 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static"  className="MenuApp">
+    
+    <AppBar position="static" className="MenuApp">
       <Container maxWidth="xl">
         <Toolbar disableGutters >
 
         <a href="index.html"><img src="logomio.png" alt="logo"/></a>
           
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
+           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
             
               
             
@@ -91,7 +88,7 @@ const ResponsiveAppBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <AddShoppingCartIcon/>
+            <CartWidgetNav/>
           </Box>
           
         </Toolbar>
@@ -100,3 +97,4 @@ const ResponsiveAppBar = () => {
   );
 };
 export default ResponsiveAppBar;
+
