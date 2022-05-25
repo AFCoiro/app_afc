@@ -1,10 +1,13 @@
 
 import './App.css';
 import ResponsiveAppBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/Card/Card'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import React from "react";
 import Grid from '@mui/material/Grid';
+
+
 function App() {
+
   return (
     <div className="App">
       <header>
@@ -16,14 +19,14 @@ function App() {
                 direction="row"
                 justifyContent="space-evenly"
                 alignItems="center" >
-            <grid item md={4}><ItemListContainer titulo={'Hola'} text={'Idioma español'}/>
-            </grid>
+            <Grid item md={4}><ItemListContainer id={1} titulo={'Spiderman'} texto={'La última Caceria de Kraven'} stock={5}/>
+            </Grid>
 
-            <grid item md={4}><ItemListContainer titulo={'Hello'} text={'Idioma ingles'}/>
-            </grid>
+            <Grid item md={4}><ItemListContainer id={2} titulo={'Batman'} texto={'Muerte en Familia(Agotado)'} stock={2}/>
+            </Grid>
             
-            <grid item md={4}><ItemListContainer titulo={'Ciao'} text={'Idioma italiano'}/>
-            </grid>
+            <Grid item md={4}><ItemListContainer id={3} titulo={'Slam Dunk'} texto={'Colección completa de 20 tomos'} stock={3}/>
+            </Grid>
           
         </Grid>
       
