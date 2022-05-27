@@ -14,20 +14,11 @@ function App() {
       <ResponsiveAppBar/>
       </header>
       
-      
-        <Grid   container
-                direction="row"
-                justifyContent="space-evenly"
-                alignItems="center" >
-            <Grid item md={4}><ItemListContainer id={1} titulo={'Spiderman'} texto={'La última Caceria de Kraven'} stock={5}/>
-            </Grid>
+        <Grid>
+                
+              <ItemListContainer />
+              
 
-            <Grid item md={4}><ItemListContainer id={2} titulo={'Batman'} texto={'Muerte en Familia(Agotado)'} stock={2}/>
-            </Grid>
-            
-            <Grid item md={4}><ItemListContainer id={3} titulo={'Slam Dunk'} texto={'Colección completa de 20 tomos'} stock={3}/>
-            </Grid>
-          
         </Grid>
       
 

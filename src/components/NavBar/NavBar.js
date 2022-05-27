@@ -28,7 +28,13 @@ const ResponsiveAppBar = () => {
 
   return (
     
-    <AppBar position="static" className="MenuApp">
+    <AppBar
+     position="static" 
+     className="MenuApp"
+     sx={{
+      bgcolor: 'error.main'
+    }}
+     >
       <Container maxWidth="xl">
         <Toolbar disableGutters >
 
