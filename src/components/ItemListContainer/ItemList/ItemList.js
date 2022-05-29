@@ -3,10 +3,10 @@ import Item from './Item/Item';
 
 const ItemList = ({listaProd})=>{  
     return( 
-        listaProd.map( ({id,nombre,titulo,precio,stock} )=>{
+        listaProd.map( ({id,nombre,titulo,precio,stock,imagen} )=>{
             return(
                 <div item md={4} key={listaProd.id}>
-                    <Item id={id} nombre={nombre} titulo={titulo} precio={precio} stock={stock}  />
+                    <Item id={id} nombre={nombre} titulo={titulo} precio={precio} stock={stock} imagen={imagen} />
                 </div>   
             )
         })        

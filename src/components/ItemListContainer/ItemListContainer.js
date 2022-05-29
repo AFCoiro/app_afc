@@ -1,34 +1,12 @@
 import { useState , useEffect } from 'react'
 import './ItemListContainer.css'
+import listados from '../../utils/DataMock'
 import ItemList from './ItemList/ItemList'
 import Grid from '@mui/material/Grid';
 
 const ItemListContainer = ()=>{   
     const  [list, setList] = useState([])
-    const listados = [
-        {
-            id:1,
-            nombre:'Spiderman',
-            titulo:'La última Caceria de Kraven',
-            precio:'$1.300',
-            stock:5
-
-        },
-        {
-            id:2,
-            nombre:'Batman',
-            titulo:'Una muerte en la Familia(Agotado)',
-            precio:'$1.500',
-            stock:0
-        },
-        {
-            id:3,
-            nombre:'Slam Dunk',
-            titulo:'Colección completa de 20 tomos',
-            precio:'$12.000',
-            stock:3
-        }
-    ] 
+    
     const getItems = ()=>{
         return new Promise( (resolve)=>{
             setTimeout(() => {

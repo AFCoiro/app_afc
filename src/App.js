@@ -2,6 +2,7 @@
 import './App.css';
 import ResponsiveAppBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import React from "react";
 import Grid from '@mui/material/Grid';
 
@@ -19,7 +20,14 @@ function App() {
               <ItemListContainer />
               
 
-        </Grid>
+        </Grid> 
+
+        <Grid>
+                
+                <ItemDetailContainer />
+                
+  
+          </Grid>
       
 
       
