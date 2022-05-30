@@ -1,25 +1,26 @@
 import './ItemDetail.css'
+import ItemCount from './ItemCount/ItemCount';
 import { Grid } from '@mui/material';
-import { Button } from '@mui/material';
+import ItemListContainer from './../../ItemListContainer/ItemListContainer'
+
 
 const ItemDetail= ({data})=>{
-    const {id,nombre,titulo,precio,imagen,desc} = data;
+    const {id,nombre,titulo,precio,imagen,stock,desc} = data;
 
     return(
         <>
-        <h1>{nombre} {id}-{titulo}</h1>
-
-        <Grid container> 
-            <Grid item md={6}>
+        <Grid container className='detalle'> 
+            <Grid item md={5}>
                 <div>           
-                    <img src={`./${imagen}`} />   
+                    <img src={`/prod/${imagen}`} />   
                 </div>
             </Grid>
 
             <Grid item md={6}>
+            <h1>{nombre} {id}-{titulo}</h1>
                 <h2>{precio}</h2>
-                <p> 12 cuotas sin interés - 20% de descuento pagando con Efectivo Contraentrega para Envíos en moto- Transferencia o Deposito bancario - Efectivo o Débito en sucursal Quilmes</p>
-                <Button href='#' variant="contained" color="error"> Agregar al Carrito</Button>
+                <p> 12 cuotas sin interés - 20% de descuento pagando con Efectivo Contraentrega para Envíos en moto- Transferencia o Deposito bancario - Efectivo o Débito en sucursal.</p>
+                <ItemCount stock={stock}/>
             </Grid>
 
         </Grid>
@@ -29,6 +30,9 @@ const ItemDetail= ({data})=>{
             <p>{desc}</p>
         </Grid>
             
+        <Grid>
+            <ItemListContainer />
+        </Grid>
 
 
         </>

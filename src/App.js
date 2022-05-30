@@ -15,12 +15,12 @@ function App() {
       <ResponsiveAppBar/>
       </header>
       
-        <Grid>
+        {/* <Grid>
                 
               <ItemListContainer />
               
 
-        </Grid> 
+        </Grid>  */}
 
         <Grid>
                 

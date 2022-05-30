@@ -20,8 +20,8 @@ const listados = [
     },
     {
         id:3,
-        nombre:'Slam Dunk DELUXE ',
-        titulo:'Tomo #1',
+        nombre:'Slam Dunk',
+        titulo:'Tomo #1 DELUXE',
         precio:'$1.200',
         stock:3,
         imagen:'03.jpg'

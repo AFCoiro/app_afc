@@ -1,13 +1,15 @@
-import ItemCount from './ItemCount/ItemCount';
+import { Button } from '@mui/material';
+
 const Item = ({id,nombre,titulo,precio,stock,imagen} )=>{ 
-//   const = listado;
+
 return( 
         <div className='ItemClass'>
-        <h2>{id}-{nombre}</h2> 
-        <h3>{titulo}</h3>
-        <img src={`./../../../public/prod/${imagen}`}  alt={nombre}/>
-        <p>{precio} Stock disponible:{stock}</p> 
-        <ItemCount stock={stock}/>
+        <h2 className='titulo'>{nombre} - {titulo}</h2> 
+        
+        <img src={`/prod/${imagen}`}  alt={nombre} className='imgProd'/>
+        <h4>{precio}</h4> 
+        <Button href='#' variant="contained" color="error"> DETALLE</Button>
+
     </div>
     )
 }
