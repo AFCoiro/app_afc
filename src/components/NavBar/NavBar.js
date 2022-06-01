@@ -8,9 +8,8 @@ import Menu from '@mui/material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-
+import { Link } from 'react-router-dom';
 import CartWidgetNav from './CartWidget/CartWidget';
-
 
 
 const pages = ['Productos', 'Nosotros', 'Contacto'];
@@ -38,7 +37,7 @@ const ResponsiveAppBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters >
 
-        <a href="index.html"><img src="logomio.png" alt="logo"/></a>
+        <Link to={`/`}><img src="./logomio.png" alt="logo"/></Link> 
           
            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
             

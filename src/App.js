@@ -1,44 +1,33 @@
 
 import './App.css';
 import ResponsiveAppBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import React from "react";
-import Grid from '@mui/material/Grid';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Detail from './pages/Detail';
 
 function App() {
 
   return (
     <div className="App">
-      <header>
-      <ResponsiveAppBar/>
-      </header>
-      
-        {/* <Grid>
-                
-              <ItemListContainer />
+      <BrowserRouter>
+
+          <header>
+              <ResponsiveAppBar/>
+          </header>
+
+          <Routes>
+              <Route path='*' element="error 404- no se encontró la pagina" />
+              <Route path='/' element={<Home />} />
+              <Route path='/product/:id' element={<Detail />} />
               
+          </Routes>
 
-        </Grid>  */}
+          <footer>
+              <p className="Titulo">Diseñado por Agustín Coiro</p>
+          </footer>
 
-        <Grid>
-                
-                <ItemDetailContainer />
-                
-  
-          </Grid>
-      
-
-      
-<footer>
-        <p className="Titulo">
-          Agustín Coiro editó <code>src/App.js</code> y agregó componentes.
-        </p>
-</footer>
-
-
-
+      </BrowserRouter>
     </div>
   );
 }

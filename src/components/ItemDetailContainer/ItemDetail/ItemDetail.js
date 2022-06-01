@@ -4,7 +4,7 @@ import { Grid } from '@mui/material';
 import ItemListContainer from './../../ItemListContainer/ItemListContainer'
 
 
-const ItemDetail= ({data})=>{
+const ItemDetail= (data)=>{
     const {id,nombre,titulo,precio,imagen,stock,desc} = data;
 
     return(
@@ -12,14 +12,16 @@ const ItemDetail= ({data})=>{
         <Grid container className='detalle'> 
             <Grid item md={5}>
                 <div>           
-                    <img src={`/prod/${imagen}`} />   
+                    <img src={`/prod/${imagen}`} alt={titulo}/>   
                 </div>
             </Grid>
 
             <Grid item md={6}>
             <h1>{nombre} {id}-{titulo}</h1>
                 <h2>{precio}</h2>
-                <p> 12 cuotas sin interés - 20% de descuento pagando con Efectivo Contraentrega para Envíos en moto- Transferencia o Deposito bancario - Efectivo o Débito en sucursal.</p>
+                <p> 12 cuotas sin interés - 
+                    20% de descuento pagando con Efectivo Contraentrega para Envíos en moto- 
+                    Transferencia o Deposito bancario - Efectivo o Débito en sucursal.</p>
                 <ItemCount stock={stock}/>
             </Grid>
 
@@ -31,7 +33,7 @@ const ItemDetail= ({data})=>{
         </Grid>
             
         <Grid>
-            <ItemListContainer />
+            <ItemListContainer titleCont='Productos Relacionados'/>
         </Grid>
 
 

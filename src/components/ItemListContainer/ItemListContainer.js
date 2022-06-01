@@ -4,7 +4,7 @@ import listados from '../../utils/DataMock'
 import ItemList from './ItemList/ItemList'
 import Grid from '@mui/material/Grid';
 
-const ItemListContainer = ()=>{   
+const ItemListContainer = ({titleCont})=>{   
     const  [list, setList] = useState([])
     
     const getItems = ()=>{
@@ -27,12 +27,13 @@ const ItemListContainer = ()=>{
     }, [])
     return(
         <>
-        <h2>Comics Destacados</h2>
+        <h2>{titleCont}</h2>
         <Grid   
             container
             direction="row"
             justifyContent="space-evenly"
-            alignItems="center" >                    
+            alignItems="center" >   
+                 
 
             <ItemList listaProd={list} />
 

@@ -1,28 +1,30 @@
 import { useEffect , useState } from 'react';
 import ItemDetail from './ItemDetail/ItemDetail';
-import {listado} from '../../utils/DataMock';
+import listados from '../../utils/DataMock';
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = ()=>{
-    const  [data, setData] = useState([])
+    const id = useParams();
+    const  [ data , setData] = useState({});
 
-    const getItems = ()=>{
-        return new Promise( (resolve)=>{
-            setTimeout(() => {
-                resolve(listado)
-            }, 3000);   
-        })
-    }
+    // const filtro = listados.find( (data)=>{
+    //     return data.id == id
+    // })
 
-    useEffect( ()=>{
-        getItems()
-        .then( (resp)=>{
-            setData(resp)
-        })
-  
-    }, [])
+        useEffect( ()=>{
+             const filtro = listados.find( (data)=>{
+                 // eslint-disable-next-line
+                  return data.id == id;
+             })
+            setData(filtro);
+            console.log(filtro);
+        },[id])
+
+
 
     return(
         <ItemDetail data={data}/>
+        
     )
 }
 

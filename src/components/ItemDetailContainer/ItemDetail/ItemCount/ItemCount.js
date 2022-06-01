@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@mui/material';
 
 const ItemCount = ({stock})=>{
-    const [count, setCount] =useState(0);
+    const [count, setCount] =useState(1);
     const onAdd = ()=>{
         console.log(count)
 }
